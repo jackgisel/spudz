@@ -6,7 +6,8 @@ import ProjectDetails from './components/projects/ProjectDetails';
 import SignIn from './components/auth/SignIn';
 import SignUp from './components/auth/SignUp';
 import CreateProject from './components/projects/CreateProject';
-
+import PrivateRoute from './components/auth/PrivateRoute';
+import PublicOnlyRoute from './components/auth/PublicOnlyRoute';
 
 class App extends Component {
   render() {
@@ -15,11 +16,11 @@ class App extends Component {
         <div className="app">
           <Navbar />
           <Switch>
-            <Route exact path="/" component={Dashboard} />
-            <Route path="/project/:id" component={ProjectDetails} />
-            <Route path="/signin" component={SignIn} />
-            <Route path="/signup" component={SignUp} />
-            <Route path="/create-project" component={CreateProject} />
+            <PrivateRoute exact path="/" component={Dashboard} />
+            <PrivateRoute path="/project/:id" component={ProjectDetails} />
+            <PublicOnlyRoute path="/signin" component={SignIn} />
+            <PublicOnlyRoute path="/signup" component={SignUp} />
+            <PrivateRoute path="/create-project" component={CreateProject} />
           </Switch>
         </div>
       </BrowserRouter>

@@ -4,6 +4,7 @@ import { firestoreConnect } from 'react-redux-firebase';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 
+
 class ProjectDetails extends Component {
     render() {
         const { project } = this.props;

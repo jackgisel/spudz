@@ -8,7 +8,7 @@ class SignedInLinks extends Component {
         return (
             <ul className="right">
                 <li><NavLink to="/create-project">New Project</NavLink></li>
-                <li><a href="#" onClick={this.props.signOut} >Logout</a></li>
+                <li><button className="btn lighten-1" onClick={this.props.signOut} >Logout</button></li>
                 <li><NavLink to="/" className="btn btn-floating pink lighten-1">JG</NavLink></li>
             </ul>
         );
