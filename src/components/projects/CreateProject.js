@@ -14,6 +14,7 @@ class CreateProject extends Component {
     onSubmit = (e) => {
         e.preventDefault();
         this.props.createProject(this.state);
+        this.props.history.push('/');
     }
     render() {
         return (
