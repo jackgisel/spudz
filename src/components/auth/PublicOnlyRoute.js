@@ -8,11 +8,7 @@ class PublicOnlyRoute extends Component {
         console.log(this.props);
         if(auth.uid) return <Redirect to="/" />;
         return (
-            <Route
-                {...this.props}
-                >
-                {this.props.children}
-            </Route>
+            <Route {...this.props} />
         );
     }
 }

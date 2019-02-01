@@ -7,9 +7,7 @@ class PrivateRoute extends Component {
         const { auth } = this.props;
         if(!auth.uid) return <Redirect to="/signup" />;
         return (
-            <Route {...this.props}>
-                {this.props.children}
-            </Route>
+            <Route {...this.props} />
         );
     }
 }

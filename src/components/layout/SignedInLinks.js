@@ -9,7 +9,7 @@ class SignedInLinks extends Component {
             <ul className="right">
                 <li><NavLink to="/create-project">New Project</NavLink></li>
                 <li><button className="btn lighten-1" onClick={this.props.signOut} >Logout</button></li>
-                <li><NavLink to="/" className="btn btn-floating pink lighten-1">JG</NavLink></li>
+                <li><NavLink to="/" className="btn btn-floating pink lighten-1">{this.props.profile.initials}</NavLink></li>
             </ul>
         );
     }

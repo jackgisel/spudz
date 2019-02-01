@@ -20,7 +20,7 @@ class SignIn extends Component {
             <div className="container">
                 <form onSubmit={this.onSubmit} className="white">
                     <h5 className="grey-text text-darken-3">Sign in</h5>
-                    {this.props.authError ? <p>{this.props.authError}</p> : null}
+                    {this.props.authError ? <p className="red lighten-4">{this.props.authError}</p> : null}
                     <div className="input-field">
                         <label htmlFor="email">Email:</label>
                         <input type="email" id="email" onChange={this.onChange} />
